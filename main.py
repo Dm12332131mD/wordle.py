@@ -38,9 +38,9 @@ def render(answer, guesses):
     os.system("cls")
     print("=== [ Wordle.py ] ===\n")
     for i in range(len(guesses)):
+        guess = guesses[i]
         characters = []
         for j in range(5):
-            guess = guesses[i]
             character = guess[j]
             if character == answer[j]:
                 characters.append(f"\033[102m\033[30m {character} \033[0m")
